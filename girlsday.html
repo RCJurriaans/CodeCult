@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>Hyperion Lyceum</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/Chart.js"></script>
+	<script src="assets/js/modernizr.custom.js"></script>
+	<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+	
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+  <div id="dg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2 desc">
+					<h1 align="center"><img src="assets/img/girlsdaylogo.png"  height="160em" max-width="100%"></h1>
+				</div>
+				<div class="col-lg-10 desc">
+					<h1 >Programmeren Workshop: Girls Day</h1>
+					<div class="row">
+						<div class="col-lg-9 desc">
+							<p style="font-size: 1.4em; color:#000">Wist jij dit? De allereerste programmeur was een vrouw. Haar naam was Ada Lovelace en zij was de dochter van de beroemde dichter <i>Lord Byron</i>. Haar moeder was bang dat kleine Ada teveel op haar vader ging lijken en zij dwong Ada om wiskunde te studeren. Als tiener werd zij gevraagd om een paper van Charles Babbage te vertalen naar het Engels. In deze paper werd een eerste prototype van een computer beschreven en zij schreef voor deze (nog niet bestaande) computer een programma om Bernoulli getallen te berekenen. Zij was dus niet alleen de eerste programmeur, zij was dit ook nog eens voordat computers bestonden!
+							</p>
+						</div>
+						<div class="col-lg-3 desc">
+							<figure style="text-align:center">
+								<img src="http://metrouk2.files.wordpress.com/2013/10/ay95895977ada-lovelace-engl.jpg"  style="width:100%; max-width:320px">
+								<figcaption >Ada Lovelace (1815-1852)</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="w">
+		<div class="container">
+			<h1> Tijd om te beginnen </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left">Ga allereerst naar <a href="http://labs.codecademy.com/" target="blank">de python sandbox</a> en klik op de Python knop in het midden. Links kan je code gaan schrijven en als je dan op de <i>Run</i> knop drukt, dan wordt jouw code rechts uitgevoerd. Volg de onderstaande opdrachten en neem de eerste stappen om de nieuwe Ada Lovelace te worden.
+			</p>
+		</div>
+	</div>	
+	<div id="g">
+		<div class="container">
+			<h1>Opdracht 1: Hello World </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left">Het allereerste dat je moet doen als je een programmeer-taal gaat leren is een <i>Hello World</i> programma te schrijven. Zo'n programma doet niks anders dan hallo zeggen tegen de persoon die het programma uitvoert. In Python is dit snel gemaakt, probeer maar het volgende uit te voeren:
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+print "Hello World"
+</pre>
+</div>
+		</div>
+	</div>	
+	<div id="w">
+		<div class="container">
+			<h1>Opdracht 2: Rekenen </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left">Laten we nu proberen iets leukers te printen. Computers zijn erg goed in rekenen en Python werkt goed als rekenmachine. Je kan getallen optellen, aftrekken, vermenigvuldigen en delen, maar ook machten rekent hij zo uit.
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+print 3+14
+print 3-14
+print 3*14
+print 10/4
+</pre>
+</div>
+			<p style="font-size: 1.4em; color:#000; text-align:left">Bij die laatste is iets vreemds aan de hand. Hoe zou dit kunnen komen?
+			</p>
+		</div>
+	</div>	
+	<div id="g">
+		<div class="container">
+			<h1>Opdracht 3: Tot 10 tellen </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left">Laten we nu proberen iets leukers te printen. Computers zijn erg goed in rekenen en het belangrijkste van rekenen is kunnen tellen. Bij programmeren doen wij dit met een <i>for-loop</i>
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+for i in range(10):
+  print i
+</pre>
+</div>
+			<p style="font-size: 1.4em; text-align:left">Als het goed is zie je dat computers ergens ander beginnen met tellen dan wat mensen doen. Kan jij nu hiermee de tafel van 4 uitprinten? Tip hierbij! Met <b>print 5,</b>	print hij op 1 regel. Dus door een komma achter je print te zetten. Je kan ook bijvoorbeeld <b>print 5, "+", 6, 5+6 </b>  gebruiken om een complexe regel te printen. Als je wilt dat de computer bij 1 begint en tot en met 10 doortelt dan kan je het volgende doen:</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+for i in range(1,11):
+  print i
+</pre>
+</div>
+
+		</div>
+	</div>	
+	<div id="w">
+		<div class="container">
+			<h1>Opdracht 4: Variabel </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Soms wil je dat de computer even iets onthoudt voor jou. Bijvoorbeeld als je een getal op meerdere plekken nodig hebt. 
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+n = 10
+x = 2
+for i in range(n):
+  print "i =", i
+  print i+x, i-x
+  print i*x, i/float(x)
+</pre>
+</div>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Maak 2 variables, <b>a</b> en <b>b</b> en bereken het product van deze 2 variables.
+			</p>
+		</div>
+	</div>	
+	<div id="g">
+		<div class="container">
+			<h1>Opdracht 5: Als dit, dan dat </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Soms heb je een stukje code die alleen hoeft uigevoerd te worden als iets waar is. Bijvoorbeeld: Stel je wilt weten of je naar een feest mag. Dit is afhankelijk van tot hoe laat het feest is en hoe oud jij bent
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+leeftijd = 14
+feestDuurtTot = 22
+if leeftijd>=16 or feestDuurtTot<22:
+  print "Jij mag naar het feest"
+else:
+  print "Jij blijft gezellig thuis"
+</pre>
+</div>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Na zo'n if staan een stel condities. Als alle condities waar zijn dan voert het programma de code uit. Wat na else staat wordt alleen uitgevoerd als de condities niet waar waren. Je kan op verschillende manier controleren.
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+leeftijd = 17
+feestDuurtTot = 22
+if (not leeftijd > 16) and (feestDuurtTot >= 22):
+  print "Jij blijft gezellig thuis"
+else:
+  print "Jij mag naar het feest"
+</pre>
+</div>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Maak voor iedere persoon in jouw groepje een variabele waar je in zet hoeveel geld je hebt. Schrijf een programma dat kijkt of jullie samen genoeg geld hebben om naar de bioscoop te gaan.
+			</p>
+		</div>
+	</div>	
+	<div id="w">
+		<div class="container">
+			<h1>Opdracht 6: Functioneel </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Het begint nu misschien al duidelijk te worden dat het vervelend is om iedere keer iets in je programma aan te passen en dan opnieuw uit te voeren. Als je een stukje code vaak wilt uitvoeren met verschillende waardes, dan is het verstandig om een functie te maken.
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+def colaDrinken(naam, tijd, leeftijd, geldInZak):
+    if tijd>12 and leeftijd>=14 and geldInZak>=1.50:
+        print naam, "kan en mag cola drinken"
+    else:
+        if geldInZak<1.50:
+            print naam, "heeft te weinig geld"
+        elif leeftijd<14:
+            print naam, "is niet oud genoeg"
+        elif tijd<=12:
+            print "Het is te vroeg voor cola voor", naam
+
+colaDrinken("Robrecht", 13, 26, 1)
+colaDrinken("Sandra", 15, 15, 2)
+colaDrinken("Roos", 11, 12, 4)
+colaDrinken("Sofia", 11, 18, 3)
+colaDrinken("Eliza", 13, 12, 1)
+</pre>
+</div>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Maak een functie die gegeven uursalaris en gewerkte uren berekent hoeveel je hebt verdiend.
+			</p>
+		</div>
+	</div>	
+	
+		<div id="g">
+		<div class="container">
+			<h1>Tijd voor wiskunde! </h1>
+			<iframe width="640" height="480" src="//www.youtube.com/embed/uXoh6vi6J5U" frameborder="0" allowfullscreen></iframe>
+		</div>	
+	</div>	
+	
+	<div id="w">
+		<div class="container">
+			<h1>Opdracht 7: pi </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> pi is een zeer handig getal. Wij kunnen pi makkelijk gebruiken met de volgende code:
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+from math import pi
+
+print "PI =", pi
+def omtrekEnOppervlakVanCirkel(radius):
+	print "cirkel met radius van", radius, "cm:\t omtrek =", pi*(radius+radius), "en oppervlak =", pi*radius*radius
+
+omtrekEnOppervlakVanCirkel(1)
+omtrekEnOppervlakVanCirkel(5)
+omtrekEnOppervlakVanCirkel(15)
+omtrekEnOppervlakVanCirkel(25)
+</pre>
+</div>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Het enige wat jammer is, is dat pi hier niet zoveel decimalen heeft. Daarom gaan we pi nu zelf berekenen! De formule om dat te doen is:<br>
+			pi = 4/1 - 4/3 + 4/5 - 4/7 + 4/9 - 4/11 + 4/13 - ....<br>
+			en dat gaat dan voor eeuwig door. Een computer kan dit snel uitrekenen en daarom gaan wij nu een functie maken die dit voor ons gaat doen. Vul de rest van de functie aan en kijk of je pi kan berekenen
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+def berekenPi():
+    # Dit is het begin punt
+    pi = 4
+    for i in range(1000):
+        # Wat moeten wij hier doen?
+        pi = pi
+    return pi
+        
+pi = berekenPi()
+print pi
+</pre>
+</div>
+		</div>
+	</div>	
+	
+	<div id="g">
+		<div class="container">
+			<h1>Opdracht 8: Fibonacci </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Fibonacci is een getallen reeks die begint met 0,1. Ieder volgend getal kan je berekenen door de laatste 2 getallen bij elkaar op te tellen. 0,1,1,2,3,5,8,13,21,34... enzovoorts. Tijd om een functie te maken die dat voor ons doet
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+def fibonacci(iteraties):
+    a = 0
+    b = 1
+    for i in range(iteraties):
+        # Wat moeten wij hier invullen?
+
+fibonacci(100)
+
+</pre>
+</div>
+<iframe width="640" height="480" src="//www.youtube.com/embed/ahXIMUkSXX0" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>	
+	<div id="w">
+		<div class="container">
+			<h1>Opdracht 9: Gemiddelde cijfer </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Al die wiskunde is leuk, maar wat kan je er nou eigenlijk mee. Veel rekenwerk doen is saai en gelukkig zijn computers veel beter en sneller dan wij dat zijn. Stel je wil jouw gemiddelde cijfer berekenen. Hoe pak je dat aan?
+			</p>
+<div class="container">
+<pre class="prettyprint lang-py" style="text-align:left" >
+def gemiddeldeCijfer(vak, cijfers, zwaarteVanCijfer):
+    # Tel alle cijfers bij elkaar op
+    totaal = 0
+    for cijfer in cijfers:
+        totaal = totaal + cijfer
+	# Deel het totaal door het aantal cijfers
+	gemiddelde = totaal/float(len(cijfers))
+    print "Voor", vak, "sta ik een", gemiddelde
+	
+gemiddeldeCijfer("Wiskunde", [6,7,9,4,5], [0.2, 0.4, 0.2, 0.3, 0.1])
+gemiddeldeCijfer("Engels", [8,10,9,6,7], [0.2, 0.2, 0.1, 0.2, 0.3])
+
+</pre>
+</div>
+			<p style="font-size: 1.4em; color:#000; text-align:left">Het bovenstaande programma berekent een gemiddelde voor een lijst met cijfers. Alleen niet ieder cijfer telt even zwaar mee. Kan jij het echte gemiddelde berekenen met de gewichten van de cijfers die in <b>zwaarteVanCijfers</b> staan?
+			</p>
+
+		</div>
+	</div>	
+	
+	<div id="g">
+		<div class="container">
+			<h1>Opdracht 10: Doe het zelf! </h1>
+			<p style="font-size: 1.4em; color:#000; text-align:left"> Je hebt nu een paar programmas gemaakt. Probeer eens iets te verzinnen om te maken. Je kan bijvoorbeeld een functie maken die Pythagoras voor je uitrekent. Of een functie die bepaalt hoe lang je moet sparen voor een nieuwe tas. Of wat dan ook! Met programmeren kan je alles maken wat je zou willen. Als je meer wilt leren kan je kijken bij de volgende sites:
+			<ul style="font-size:1.6em; text-align:left">
+				<li><a href="http://girldevelopit.com/materials">Girl Develop It</a>
+				<li><a href="https://www.khanacademy.org/computing/cs/programming">Khan Computer Programming</a>
+				<li><a href="http://www.afterhoursprogramming.com/tutorial/Python/Overview/">After Hours Programming - meer Python</a>
+				<li><a href="http://www.codecademy.com/">CodeCademy - bouw websites</a>
+				<li><a href="http://scratch.mit.edu/">Games maken met Scratch</a>
+				<li><a href="http://light-bot.com/hoc.html">Los puzzels op met code</a>
+				<li><a href="https://groklearning.com/csedweek/hoc-eliza/">Maak een chat-bot</a>
+				<li><a href="https://lookingglass.wustl.edu/help/tutorials/1-create-a-story-with-a-community-template">Maak een animatie-film</a>
+			</ul>
+			</p>
+		</div>
+	</div>	
+	<!-- ========== FOOTER SECTION ========== -->
+	<section id="contact" name="contact"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row">
+					<h3><b>Join the Movement</b></h3>
+					<br>
+					<div class="col-lg-4">
+						<h3><b>Email ons:</b></h3>
+						<h3><a href="mailto:info@perceptum.nl" target="_blank">info@perceptum.nl</a></h3>
+						<br>
+					</div>
+					
+					<div class="col-lg-4">	
+
+					</div>
+					
+					<div class="col-lg-4">
+						<h3><b>Volg ons online</b></h3>
+						<h3>
+							<a href="https://www.facebook.com/code.cult" target="_blank"><i class="icon-facebook"></i></a>
+							<a href="https://twitter.com/codecult" target="_blank"><i class="icon-twitter"></i></a>
+							<a href="https://plus.google.com/communities/102716087425361188212" target="_blank"><i class="icon-google-plus"></i></a>
+							<a href="mailto:info@perceptum.nl" target="_blank"><i class="icon-envelope"></i></a>
+						</h3>
+						<br>
+					</div>
+					
+					<h3><a href="http://www.codecult.nl"><b>Code Cult</b></a></h3>
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /f -->
+	
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/main.js"></script>
+  </body>
+</html>
