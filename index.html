@@ -1,366 +1,456 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <title>Code Cult</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/freelancer.css" rel="stylesheet" type="text/css">
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <!-- Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
-    <script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/Chart.js"></script>
-	<!--<script src="assets/js/modernizr.custom.js"></script>-->
+    <!-- Custom Css -->
+    <link href="css/extra.css" rel="stylesheet" type="text/css">
 
-	<script type="text/javascript">
-		/**
-		* Removes previous feedback message and posts a new one
-		* Also provides basic frontend e-mail validation
-		**/
-		function formSubmit(flag){
-			var confirm = document.getElementById('confirm');
-			var wrong = document.getElementById('wrong');
-			
-			// Remove old feedback, if it is present.
-			if(confirm) {
-				confirm.parentNode.removeChild(confirm);
-			}
-			if(wrong) {
-				wrong.parentNode.removeChild(wrong);
-			}
-
-			// Create HTML to append to div
-			var text = "<div id='confirm' style='color:black;'>Je reactie is ontvangen!</div>";
-			var errorText = "<div id='wrong' style='color:red'>Sorry, dat lijkt niet op een e-mailadres!</div>"
-			
-			// Get user's emailaddress
-			var userInput = document.forms['emailform']['entry.1057991613'].value;
-
-			// using http://www.w3schools.com/js/js_form_validation.asp
-			var posAt = userInput.indexOf("@");
-			var posDot = userInput.lastIndexOf(".");
-
-			/**
-			* Check if:
-			* - @ is not first character
-			* - There are at least two characters between @ and the last dot
-			* - There are at least two characters following the last dot 
-			* If userInput fails one of these, an error is appended
-			* If userInput passes all of them, a confirmation is appended
-			**/
-			if(posAt < 1 || posDot < posAt+2 || posDot+2 > userInput.length) {
-				var div = document.getElementById(flag);
-				div.innerHTML = div.innerHTML + errorText;
-				return false;
-			}
-			else {
-				var div = document.getElementById(flag);
-				div.innerHTML = div.innerHTML + text;
-				return true;
-			}
-			
-		}
-	</script>
-	
-
-	
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- IE8 support for HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-  </head>
+    <script type="text/javascript">
+        /**
+        * Removes previous feedback message and posts a new one
+        * Also provides basic frontend e-mail validation
+        **/
+        function formSubmit(flag){
+            var confirm = document.getElementById('confirm');
+            var wrong = document.getElementById('wrong');
+            
+            // Remove old feedback, if it is present.
+            if(confirm) {
+                confirm.parentNode.removeChild(confirm);
+            }
+            if(wrong) {
+                wrong.parentNode.removeChild(wrong);
+            }
 
-  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+            // Create HTML to append to div
+            var text = "<div id='confirm' style='color:black;'>Je reactie is ontvangen!</div>";
+            var errorText = "<div id='wrong' style='color:red'>Sorry, dat lijkt niet op een e-mailadres!</div>"
+            
+            // Get user's emailaddress
+            var userInput = document.forms['emailform']['entry.1057991613'].value;
 
-	<!-- ========== HEADER SECTION ========== -->
-	<section id="home" name="home"></section>
-	<div id="headerwrap">
-		<div class="container">
-			<br>
-			<h1><a href="#register" class="smoothScroll"><p align="center"><img src="assets/img/logo.png"  max-height="90%"></a></h1>
-			<!--<h2>Samen Leren Coden</h2>-->
-			<div class="row">
-				<br>
-				<br>
-				<br>
-				<div class="col-lg-6 col-lg-offset-3">
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-	
-	<div id="w">
-		<div class="container">
-			<a href="summercourse.html">
-				<div class="row">
-				<div class="col-lg-2"></div>
-					<div class="col-lg-2">
-						<h1><img src="assets/img/Summer_Programming.jpg"  style="max-width:80%; max-height:160px"></h1>
-					</div>
-					<div class="col-lg-8">
-						<h1 align="left">Zomer Vakantie bij Code Cult!</h1>
-						<h2 style="color:#f85c37" align="left">Kom naar de Code Cult Summer School. Klik hier!</h2>
-					</div>
-				</div>
-			</a>
-		</div>
-	</div>	
-	<!--
-	<div id="g">
-		<div class="container">
-			<div class="row">
-				<a href="girlsday.html">
-					<h1><img src="http://www.surf.nl/binaries/content/gallery/surf/nieuws/Girlsday_logo_2012.jpg"  style="width:80%; max-width:320px"></h1>
-					<h4>Workshop Programmeren</h4>
-					<h2 style="color:#f85c37">Klik Hier!</h2>
-				</a>
-			</div>
-		</div>
-	</div>
-	
-	
-	<div id="g">
-		<div class="container">
-			<div class="row">
-				<h3>Workshop Programmeren Montessorischool  Noordwijk</h3>
-				<a href="Montessori.html"><h2 style="color:#f85c37">Klik Hier!</h2></a>
-				<iframe width="960" height="720" src="//www.youtube.com/embed/NGX2h-u-uzk" frameborder="0" allowfullscreen></iframe>
-			</div>
-		</div>
-	</div>
-	-->
-	
-	<!-- ========== WHITE SECTION ========== -->
-	<div id="w">
-		<div class="container">
-			<div class="row">
-				
-				<div class="col-lg-8 col-lg-offset-2">
-				<h3>Welkom bij <bold>Code Cult</bold>. Samen leren programmeren. Een initiatief van <bold>coders</bold> voor <bold>coders</bold>. <br/>
-					Wil jij leren <bold>programmeren</bold>? Schrijf je vandaag nog in.
-				</h3>
-				</div>
-				<div class="col-lg-2 desc col-lg-offset-5">
-						
-						<h3 align="center">
-						<a href="https://www.facebook.com/code.cult" target="_blank"><i class="icon-facebook"></i></a>
-							<a href="https://twitter.com/codecult" target="_blank"><i class="icon-twitter"></i></a>
-							<a href="https://plus.google.com/communities/102716087425361188212" target="_blank"><i class="icon-google-plus"></i></a>
-							<a href="mailto:info@perceptum.nl" target="_blank"><i class="icon-envelope"></i></a>
-							<br>
-							Join the Movement							
-							
-							</h3>
-					</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
-	
-	<!-- ========== SERVICES - GREY SECTION ========== -->
-	<section id="services" name="services"></section>
-	<div id="g">
-		<div class="container">
-			<div class="row">
-				<h3>Jij bepaalt wat voor programmeur jij wilt zijn</h3>
-				<br>
-				<br>
-				<div class="col-lg-3">
-					<img src="assets/img/controller.png" height="180px" max-width="50%">
-					<h4>Games</h4>
-					<p>Of je nou games wilt maken voor tablets, PC of op sites. Leer de basis waarmee jij jouw droom-game werkelijkheid kan maken</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/sites.png" height="180px" max-width="50%">
-					<h4>Websites</h4>
-					<p>Leer de wonderen van de online wereld en leer de benodigde skills om zelf websites te bouwen</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/apps.png" height="180px" max-width="50%">
-					<h4>Apps</h4>
-					<p>Zijn er bepaalde apps die jij mist op je telefoon? Maak ze zelf!</p>
-				</div>
-				<div class="col-lg-3">
-					<img src="assets/img/robots.png" height="180px" max-width="50%">
-					<h4>Robots</h4>
-					<p>Altijd al je eigen robot willen programmeren? Ga de uitdaging aan</p>
-				</div>
-			</div>
-			<div class="col-lg-8 col-lg-offset-2">
-				<h3><a href="item.html">Kijk hier voor goed materiaal om mee te beginnen</a></h3>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /g -->
-	
-	<section id="portfolio" name="portfolio"></section>
-	<div id="portfoliowrap">
-		<div class="container">
-			<div class="row">
-				<h3 align="center">Hoe het werkt</h3>
-				<br>
-				<div class="col-lg-5 port-space">
-					<p>Er zijn genoeg tutorials te vinden om te leren programmeren, maar waar moet je beginnen? En hoe hou je jezelf gemotiveerd? Bij Code Cult werk je samen</p>
-				</div>
-				<div class="col-lg-2 port-space"></div>
-				<div class="col-lg-5 port-space">
-					<p>Of je nou vast zit of gewoon even je laatste creatie wilt delen. Bij Code Cult zit je samen met andere programmeurs die altijd geïnteresseerd zijn</p>
-				</div>
-			</div>	
-			<div class="row">
-				<div class="col-lg-8 port-space col-lg-offset-2">
-					<p align="center">Kies je <bold>eigen pad</bold>. Niet iedereen wil dezelfde dingen maken <br>en het is dus belangrijk om er zelf achter te komen wat je leuk vindt</p>
-				</div>
-				<div class="col-lg-8 port-space col-lg-offset-2">
-					<h3 align="center"><a href="item.html">Klaar om je eigen pad te vinden?</a></h3>
-				</div>
-			</div>	
-		</div>
-	</div><!-- /portfoliowrap -->
-	
-	<!-- ========== WHITE SECTION ========== -->
-	<section id="register" name="register"></section>
-	<div id="w">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h3>Coden is een <bold>sport</bold> en<br> je leert het beste als je het <bold>samen</bold> doet.
-				</h3>
-				<h4>Blijf op de hoogte:</h4>
-				<script type="text/javascript">var submitted=false;</script>
-				<iframe name="hidden_iframe" id="hidden_iframeDown" style="display:none;" onload="if(submitted) {formSubmit('form')}"></iframe>
-				<form name ="emailform" action="https://docs.google.com/a/perceptum.nl/forms/d/11UB1z2JayydEu9qy-8rjQMNs6JRn76t-L4ZZWj8oADA/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true">
-					<div role="list">
-						<div class="ss-form-question errorbox-good" role="listitem">
-							<div dir="ltr" class="ss-item jfk-scrollbar ss-item-required ss-text">
-								<div class="ss-form-entry">
-									<label aria-hidden="true" class="ss-q-item-label" for="entry_1057991613">
-										<div class="ss-q-title">E-mail
-											<label for="itemView.getDomIdToLabel()" aria-label="(Verplicht veld)"></label>
-										</div>
-										<div class="ss-q-help ss-secondary-text" dir="ltr"></div>
-									</label>
-									<input type="text" name="entry.1057991613" placeholder="ik@voorbeeld.nl" class="ss-q-short" id="entry_1057991613" dir="auto" aria-label="E-mail  " aria-required="true" required="" title="">
-								</div>
-							</div>
-						</div>
-						<input type="hidden" name="draftResponse" value="[,,&quot;1836563596584766178&quot;]">
-						<input type="hidden" name="pageHistory" value="0">
-						<input type="hidden" name="fromEmail" value="false">
-						<input type="hidden" name="fbzx" value="1836563596584766178">
-						<span id="form"><input type="submit" name="submit" value="Verzenden" id="ss-submit"></span>
-					</div>
-				</form>
-		</div>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
-	
-	<!-- ========== ABOUT - GREY SECTION ========== -->
-	<section id="about" name="about"></section>
-	<div id="g">
-		<div class="container">
-			<div class="row">
-				<h3>Wie wij zijn</h3>
-				<br>
-				<br>
-				<div class="col-lg-2"></div>
-				<div class="col-lg-8">
-				<p>Wij hebben leren programmeren in een tijd waarin er nog geen internet was. Dit betekende dat je alleen kon leren programmeren als je gesteund werd door anderen in je omgeving. Wij willen deze ervaring terug brengen en ervoor zorgen dat die kansen die wij gekregen hebben voor iedereen beschikbaar zijn</p>
-				<br>
-				<br>
-				</div>
-				<div class="col-lg-2"></div>
-				</div>
-				<div class="row">
-				<div class="col-lg-1"></div>
-				<div class="col-lg-5 team">
-					<img class="img-circle" src="assets/img/elise2.jpeg" height="90" width="90">
-					<h4>Elise van der Pol</h4>
-					<h5><i>Python, Javascript, Java</i></h5>
-					<p>
-						<a href="https://twitter.com/ElisevanderPol" target="_blank"><i class="icon-twitter"></i></a>
-						<a href="mailto:elise@perceptum.nl" target="_blank"><i class="icon-envelope"></i></a>
+            // using http://www.w3schools.com/js/js_form_validation.asp
+            var posAt = userInput.indexOf("@");
+            var posDot = userInput.lastIndexOf(".");
 
-					</p>
-				</div>
+            /**
+            * Check if:
+            * - @ is not first character
+            * - There are at least two characters between @ and the last dot
+            * - There are at least two characters following the last dot 
+            * If userInput fails one of these, an error is appended
+            * If userInput passes all of them, a confirmation is appended
+            **/
+            if(posAt < 1 || posDot < posAt+2 || posDot+2 > userInput.length) {
+                var div = document.getElementById(flag);
+                div.innerHTML = div.innerHTML + errorText;
+                return false;
+            }
+            else {
+                var div = document.getElementById(flag);
+                div.innerHTML = div.innerHTML + text;
+                return true;
+            }
+            
+        }
+    </script>
 
-				<div class="col-lg-5 team">
-						<img class="img-circle" src="assets/img/robrecht.jpg" height="90" width="90">
-					<h4>Robrecht Jurriaans</h4>
-					<h5><i>C++, Python, Lua</i></h5>
-						<a href="https://twitter.com/RobrechtJ" target="_blank"><i class="icon-twitter"></i></a>
-						<a href="mailto:robrecht@perceptum.nl" target="_blank"><i class="icon-envelope"></i></a>
+</head>
 
-					</p>
-				</div>
-				<div class="col-lg-1"></div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /g -->
-	
-	<!-- ========== FOOTER SECTION ========== -->
-	<section id="contact" name="contact"></section>
-	<div id="f">
-		<div class="container">
-			<div class="row">
-					<h3><b>Heb je verdere vragen?</b></h3>
-					<br>
-					<div class="col-lg-4">
-						<h3><b>Email ons:</b></h3>
-						<h3><a href="mailto:info@perceptum.nl" target="_blank">info@perceptum.nl</a></h3>
-						<br>
-					</div>
-					
-					<div class="col-lg-4">	
-						<h3><b>Bel ons:</b></h3>
-						<h3>020 705 1000</h3>
-						<br>
-					</div>
-					
-					<div class="col-lg-4">
-						<h3><b>Volg ons online</b></h3>
-						<p>
-							<a href="https://www.facebook.com/code.cult" target="_blank"><i class="icon-facebook"></i></a>
-							<a href="https://twitter.com/codecult" target="_blank"><i class="icon-twitter"></i></a>
-							<a href="https://plus.google.com/communities/102716087425361188212" target="_blank"><i class="icon-google-plus"></i></a>
-							<a href="mailto:info@perceptum.nl" target="_blank"><i class="icon-envelope"></i></a>
-						</p>
-						<br>
-					</div>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /f -->
-	
-	<div id="c">
-		<div class="container">
-			<p>Initiatief van <a href="http://www.perceptum.nl">Perceptum</a></p>
-		
-		</div>
-	</div>
-	
-	
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-	<script src="assets/js/classie.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-	<script src="assets/js/main.js"></script>
-	
-		<script>
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Code Cult</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="projects/workshops.html">Workshops</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="projects/summerschool.html">Summer School</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="projects/lesprogrammas.html">Lesprogramma's</a>
+                    </li>
+                   <li class="page-scroll">
+                        <a href="projects/resources.html">Materialen</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/icons/logo_alt.png" alt="">
+                    <div class="intro-text">
+                        <!--<span class="name">Code Cult</span>
+                        <hr class="star-light">-->
+                        <span class="skills">Welkom bij <span class="emphasis">Code Cult</span>. Samen leren programmeren. Een initiatief van <span class="emphasis">coders</span> voor <span class="emphasis">coders</span>. </span>
+                        <p class="skills">Wil jij leren <span class="emphasis">programmeren</span>? Schrijf je vandaag nog in.</p>
+                        <h3> Join the movement </h3>
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/code.cult" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://plus.google.com/communities/102716087425361188212" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://twitter.com/codecult" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                            <li><a href="mailto:info@perceptum.nl" class="btn-social btn-outline"><i class ="fa fa-fw fa-envelope"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Wat voor programmeur wil je zijn?</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 four portfolio-item">
+                    <a href="#games" class="portfolio-link" data-toggle="modal">
+                        <div class="caption small-caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/icons/games.png" class="img-responsive small" alt="" />
+                    </a>
+                    <p class="type_text">Leer de de basis waarmee jij jouw droom-game werkelijkheid kunt maken!</p>
+                </div>
+                <div class="col-sm-4 four portfolio-item">
+                    <a href="#sites" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/icons/sites.png" class="img-responsive small" alt="" />
+                    </a>
+                <p class="type_text">Leer zelf een website bouwen.</p>    
+                </div>
+                <div class="col-sm-4 four portfolio-item">
+                    <a href="#apps" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/icons/apps.png" class="img-responsive small" alt="" />
+                    </a>
+                <p class="type_text">Zijn er bepaalde apps die jij mist op je telefoon? Maak ze zelf!</p>    
+                </div>
+                <div class="col-sm-4 four portfolio-item">
+                    <a href="#robots" class="portfolio-link" data-toggle="modal">
+                        <div class="caption">
+                            <div class="caption-content">
+                                <i class="fa fa-search-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/icons/robots.png" class="img-responsive small" alt="" />
+                    </a>
+                <p class="type_text">Altijd al je eigen robot willen programmeren?</p>
+                </div>
+            </div>
+            <a href="projects/resources.html"><h2 class="center nocaps">Klik hier voor materialen</h2></a>
+        </div>
+    </section>
+
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Hoe het werkt</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Er zijn genoeg tutorials te vinden om te leren programmeren, maar waar moet je beginnen? En hoe hou je jezelf gemotiveerd? Bij Code Cult werk je samen.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Of je nou vast zit of gewoon even je laatste creatie wilt delen. Bij Code Cult zit je samen met andere programmeurs die altijd geïnteresseerd zijn.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p>Kies je eigen pad. Niet iedereen wil dezelfde dingen maken en het is dus belangrijk om er zelf achter te komen wat je leuk vindt</p>
+                    <a href="projects/resources.html" class="btn btn-lg btn-outline">
+                        <i class="fa fa-link"></i> Kies je eigen pad!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2>Blijf op de hoogte</h2>
+                <hr class="star-primary">
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 text-center">
+            <p class="baseOther">Coden is een <span class="emphasis">sport</span> en je leert het beste als je het <span class="emphasis">samen</span> doet.<p>
+                <script type="text/javascript">var submitted=false;</script>
+                <iframe name="hidden_iframe" id="hidden_iframeDown" style="display:none;" onload="if(submitted) {formSubmit('form')}"></iframe>
+                <form name ="emailform" action="https://docs.google.com/a/perceptum.nl/forms/d/11UB1z2JayydEu9qy-8rjQMNs6JRn76t-L4ZZWj8oADA/formResponse" method="POST" id="ss-form" target="hidden_iframe" onsubmit="submitted=true">
+                    <div role="list">
+                        <div class="ss-form-question errorbox-good" role="listitem">
+                            <div dir="ltr" class="ss-item jfk-scrollbar ss-item-required ss-text">
+                                <div class="ss-form-entry">
+                                    <label aria-hidden="true" class="ss-q-item-label" for="entry_1057991613">
+                                        <div class="ss-q-title"><span class="emphasis">E-mail:</span>
+                                            <label for="itemView.getDomIdToLabel()" aria-label="(Verplicht veld)"></label>
+                                        </div>
+                                        <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
+                                    </label>
+                                    <input type="text" name="entry.1057991613" placeholder="ik@voorbeeld.nl" class="ss-q-short" id="entry_1057991613" dir="auto" aria-label="E-mail  " aria-required="true" required="" title="">
+                                </div>
+                            </div>
+                        </div>
+                        <input type="hidden" name="draftResponse" value="[,,&quot;1836563596584766178&quot;]">
+                        <input type="hidden" name="pageHistory" value="0">
+                        <input type="hidden" name="fromEmail" value="false">
+                        <input type="hidden" name="fbzx" value="1836563596584766178">
+                        <span id="form"><input type="submit" name="submit" value="Verzenden" id="ss-submit"></span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Wie wij zijn</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p>Wij hebben leren programmeren in een tijd waarin er nog geen internet was. Dit betekende dat je alleen kon leren programmeren als je gesteund werd door anderen in je omgeving. Wij willen deze ervaring terugbrengen en ervoor zorgen dat de kansen die wij gekregen hebben voor iedereen beschikbaar zijn.</p>
+                </div>
+  
+  
+		<div class="col-lg-4 col-lg-offset-2 text-center">
+			<img class="img-circle" src="img/people/elisefix.jpg" height="90" width="90">
+			<h4 class="normal">Elise van der Pol</h4>
+			<h5 class="normal"><i>Python, Javascript, Java</i></h5>
+			<ul class="list-inline">
+			<li><a href="https://www.twitter.com/ElisevanderPol" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
+			<li><a href="mailto:elise@perceptum.nl" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i></a></li>
+			</ul>
+               </div>
+                <div class="col-lg-4 text-center">
+			<img class="img-circle" src="img/people/robrecht.gif" height="90" width="90">
+			<h4 class="normal">Robrecht Jurriaans</h4>
+			<h5 class="normal"><i>C++, Lua, Python</i></h5>
+			<ul class="list-inline">
+			<li><a href="https://www.twitter.com/RobrechtJ" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a></li>
+			<li><a href="mailto:robrecht@perceptum.nl" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i></a></li>
+			</ul>
+               </div>
+           </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+            <div class="col-lg-12 text-center">
+                <h2>Verdere vragen?</h2>
+            </div>
+                 <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>E-mail ons:</h3>
+                        <p><a class="mailer" href="mailto:info@codecult.nl" target="_blank">info@codecult.nl</a></p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Bel ons:</h3>
+			<p>020 - 705 1000</p>
+                   </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Volg ons online:</h3>
+                        <ul class="list-inline">
+                            <li><a href="https://www.facebook.com/code.cult" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://plus.google.com/communities/102716087425361188212" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                            </li>
+                            <li><a href="https://www.twitter.com/codecult" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Initiatief van <a href="http://www.perceptum.nl">Perceptum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="games" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>PGames</h2>
+                            <hr class="star-primary">
+                            <img src="img/icons/games.png" class="img-responsive img-centered small" alt="">
+                            <p>Het maakt niet uit of je games wilt maken voor tablets, PC of op sites: Hier leer je de basis waarmee jij jouw droom-game werkelijkheid kunt maken!</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Sluiten</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="sites" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Websites</h2>
+                            <hr class="star-primary">
+                            <img src="img/icons/sites.png" class="img-responsive img-centered small" alt="">
+                            <p>Leer de wonderen van de online wereld en leer de benodigde skills om zelf websites te bouwen</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Sluiten</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="apps" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Apps</h2>
+                            <hr class="star-primary">
+                            <img src="img/icons/apps.png" class="img-responsive img-centered small" alt="">
+                            <p>Zijn er bepaalde apps die jij mist op je telefoon? Maak ze zelf!</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Sluiten</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="robots" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Robots</h2>
+                            <hr class="star-primary">
+                            <img src="img/icons/robots.png" class="img-responsive img-centered small" alt="">
+                            <p>Altijd al je eigen robot willen programmeren? Ga de uitdaging aan</p>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Sluiten</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/freelancer.js"></script>
+<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -370,6 +460,6 @@
   ga('send', 'pageview');
 
 </script>
-	
 </body>
+
 </html>
