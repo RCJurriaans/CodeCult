@@ -711,11 +711,15 @@ $(function() {
 				    type: "POST",
 				    url: "https://frozen-refuge-7062.herokuapp.com/signup/",
 				    data: datastring,
-				    dataType: "json"
-			    });
-		    return false;
-	    });
+				    dataType: "json",
+				    success: $(function(){
+						alert('Je inschrijving is verstuurd!');
+					})
+		});
+				this.reset();
+				return false;
 	});
+});
 
 /*
 	$(function() {
