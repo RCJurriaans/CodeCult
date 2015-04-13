@@ -704,27 +704,18 @@
 
 <script type="text/javascript">
 $(function() {
-	var datastring = $("#signup-form").serialize();
-	console.log(datastring);
-		$.ajax({
-				type: "POST",
-				url: "https://frozen-refuge-7062.herokuapp.com/signup/",
-				data: datastring,
-				dataType: "json"
-				//success: function() {
-				//alert('Dank je voor je inschrijving!')
-				//}
-					//var obj = jQuery.parseJSON(data); if the dataType is not specified as json uncomment this
-					// do what ever you want with the server response
-				
-				
-				/*error: function(){
-					  alert('error handing here');
-				}*/
-			});
-			return false;
-			
-		});
+    $("#signup-form").submit(function(){
+	    var datastring = $("#signup-form").serialize();
+	    console.log(datastring);
+	    $.ajax({
+				    type: "POST",
+				    url: "https://frozen-refuge-7062.herokuapp.com/signup/",
+				    data: datastring,
+				    dataType: "json"
+			    });
+		    return false;
+	    });
+	});
 
 /*
 	$(function() {
