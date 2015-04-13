@@ -237,13 +237,14 @@
                     <iframe name="hidden_iframe" id="hidden_iframe"
                     style="display:none;" onload="if(submitted)
                     {window.location='thankyou.html';}"></iframe>
-                    <form action="https://docs.google.com/forms/d/16BM8sTbKmPFSNx3lunY6c8yQ9hcZBIZS4By1nHaNBPk/formResponse" method="post"
-                    target="hidden_iframe" onsubmit="submitted=true;">
+                    <!--<form action="https://frozen-refuge-7062.herokuapp.com/signup" method="post"
+                    target="hidden_iframe" onsubmit="submitted=true;">-->
 
-                    <!--<form action="" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">-->
+                    <!--<form action="" method="POST" id="ss-form" target="_self" onsubmit=""><ol role="list" class="ss-question-list" style="padding-left: 0">
                     
                     <div class="ss-form-question errorbox-good" role="listitem">
-                        <div dir="ltr" class="ss-item ss-item-required ss-text"><div class="ss-form-entry">
+                        <div dir="ltr" class="ss-item ss-item-required ss-text">
+							<div class="ss-form-entry">
                             <!--<label class="ss-q-item-label" for="entry_1109420351">
                                 
                                     <div class="form-group col-xs-12 floating-label-form-group">
@@ -251,7 +252,7 @@
                                     </div>
                                     <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
                                 
-                            </label>-->
+                            </label>
                                 <input type="text" name="entry.1109420351" class="form-control" placeholder="Naam" id="entry_1109420351" dir="auto" aria-label="Naam  " aria-required="true" required="" title="">
                             </div>
                         </div>
@@ -268,7 +269,7 @@
                                         </div>
                                         <div class="ss-q-help ss-secondary-text" dir="ltr"></div>
                                     </div>
-                                </label>-->
+                                </label>
                                 <input type="email" name="entry.310053166" value="" class="form-control" placeholder="jouw@emailadres.nl" id="entry_310053166" dir="auto" aria-label="Email  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address">
                             </div>
                         </div>
@@ -281,7 +282,7 @@
                                     <div class="row">
                                         <div class="form-group col-xs-12 floating-label-form-group" dir="ltr"></div>
                                     </div>
-                                </label>-->
+                                </label>
                                 <textarea name="entry.1972578177" rows="6" cols="0" class="form-control" placeholder="Een bericht aan het Code Cult team (Optioneel)" id="entry_1972578177" dir="auto" aria-label="Opmerking  "></textarea>
                             </div>
                         </div>
@@ -299,14 +300,54 @@
                                 <tr>
                                     <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
                                     <button type="submit" class="btn btn-primary btn-lg" name="submit" value="Submit" id="ss-submit">Verzend</button>
-                                        <!--<input type="submit" name="submit" value="Submit" id="ss-submit">-->
+                                        <!--<input type="submit" name="submit" value="Submit" id="ss-submit">
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     </div>
-                    </ol>
+                    </ol>-->
+                    <form id="signup-form" method="POST" class="form-horizontal">
+						<fieldset>
+							<input type="hidden" name="csrfmiddlewaretoken" value="GZaifotmCSbnEgaFEP7nujwgUPiuklUc">
+								<div class="form-group ">
+									<label class="col-sm-2 control-label ">Naam</label>
+										<div class="col-sm-10">
+											<input name="name" class="form-control" type="text" value="">
+										</div>
+								</div>
+
+								<div class="form-group ">
+									<label class="col-sm-2 control-label ">Email</label>
+										<div class="col-sm-10">
+											<input name="email" class="form-control" type="text" value="">
+										</div>
+								</div>
+								<div class="form-group">
+									<label class="col-sm-2 control-label ">Stad</label>
+										<div class="col-sm-10">
+											<select class="form-control" name="city">
+        										<option value="AM" selected="">Amsterdam</option>
+												<option value="UT">Utrecht</option>
+												<option value="AR">Arnhem</option>
+											</select>
+										</div>
+								</div>
+
+								<div class="form-group ">
+									<label class="col-sm-2 control-label ">Opmerkingen (optioneel)</label>
+											<div class="col-sm-10">
+												<textarea name="message" class="form-control"></textarea>
+											</div>
+								</div>
+
+<!-- form.non_field_errors -->
+
+                                 <div class="form-actions">
+									<button class="btn btn-primary" title="Make a POST request on the Sign Up List resource">Verzend</button>
+                                 </div>
+                          </fieldset>                    
                     </form>
                 </div>
             </div>
@@ -659,6 +700,43 @@
   ga('create', 'UA-52250798-1', 'rcjurriaans.github.io');
   ga('send', 'pageview');
 
+</script>
+
+<script type="text/javascript">
+$(function() {
+	var datastring = $("#signup-form").serialize();
+	console.log(datastring);
+		$.ajax({
+				type: "POST",
+				url: "https://frozen-refuge-7062.herokuapp.com/signup/",
+				data: datastring,
+				dataType: "json"
+				//success: function() {
+				//alert('Dank je voor je inschrijving!')
+				//}
+					//var obj = jQuery.parseJSON(data); if the dataType is not specified as json uncomment this
+					// do what ever you want with the server response
+				
+				
+				/*error: function(){
+					  alert('error handing here');
+				}*/
+			});
+			return false;
+			
+		});
+
+/*
+	$(function() {
+		$('#signup-form').submit(function(){
+			$.post('https://frozen-refuge-7062.herokuapp.com/signup/', function() 
+			{"name":name,
+			"email":email,
+			"city":city,
+			"message":message });
+    return false;
+  });
+});*/
 </script>
     
 </body>
