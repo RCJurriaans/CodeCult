@@ -121,7 +121,9 @@
                         <p>Samenwerken, spelen en ervaren, dat doe je op de CodeCult SummerSchool for kids. Programmeer een robot, maak een app voor je mobiel, ontwikkel een vette game. En ga lekker sporten en spelen in de buitenlucht. Samen met (nieuwe) vriendjes en vriendinnetjes!</p>
                                  
 						<br>
-                        <a href="#inschrijven" class="frontLink"><h3>Schrijf je nu in!</h3></a>
+						<button class="btn btn-primary">
+							<a href="#inschrijven" class="frontLink" style="font-size:30px;"><b>Schrijf je nu in!</b></a>
+						</button>
                         <br>
                         
                        
@@ -332,7 +334,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
 					<div class="container">
-						<h2>Data, locatie en Kosten</h2>
+						<h2>Data, locatie en kosten</h2>
 						<hr class="star-light">
 						<h2><a href="#wie"><i style ="color:white;" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
 						<h2><a href="#waarom"><i style ="color:white;" class="fa fa-arrow-circle-down pull-right"></i></a></h2>
@@ -340,15 +342,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>De CodeCult SummerSchools vinden dit jaar plaats in drie steden (dagelijks van 09:00 tot 18:00):</p>
-                <p>Amsterdam: 6 t/m 10 juli</p>
-				<p>Utrecht: 17 t/m 21 augustus</p>
-				<p>Arnhem: 24 t/m 28 augustus</p>
+                    <p>De CodeCult SummerSchools vinden dit jaar plaats in drie steden (programma dagelijks van 10:00 tot 16:00*):</p>
+                <p><b style="font-size:22px;">Amsterdam (UvA, Science Park):</b> 6 t/m 10 juli of 13 t/m 17 juli</p>
+				<p><b style="font-size:22px;">Utrecht (HQ Conclusion, Galgenwaard):</b> 17 t/m 21 augustus</p>
+				<p><b style="font-size:22px;">Arnhem (iXperium, Campus HAN):</b> 24 t/m 28 augustus</p>
                 
                 
                     <p>De kosten voor de Summer School bedragen €395,- per kind.<br>
-					Boek je voor 15 mei a.s. dan ontvang je een vroeg boek korting van €50,- . Omdat CodeCult het belangrijk vindt dat ook kinderen uit minder draagkrachtige gezinnen kunnen deelnemen aan de SummerSchools, stelt CodeCult per SummerSchool een aantal gratis plaatsen ter beschikking. Per vier deelnemende kinderen kan één kind kosteloos deelnemen. 
+					Boek je voor 1 juni a.s. dan ontvang je een vroeg boek korting van €50,- . Omdat CodeCult het belangrijk vindt dat ook kinderen uit minder draagkrachtige gezinnen kunnen deelnemen aan de SummerSchools, stelt CodeCult per SummerSchool een aantal gratis plaatsen ter beschikking. Per vier deelnemende kinderen kan één kind kosteloos deelnemen. 
                     </p>
+                    <p style="font-size:16px;">*Kinderen kunnen vanaf 09:00 worden gebracht en tot 18:00 worden opgehaald.</p>
                 </div>
             </div>
         </div>
@@ -373,6 +376,9 @@
 				
 	</section>
 
+
+
+<!-- Inschrijving -->
     <section class = "success" id="inschrijven">
         <div class="container">
             <div class="row">
@@ -706,22 +712,35 @@
 
 <script type="text/javascript">
 $(function() {
-    $("#signup-form").submit(function(){
-	    var datastring = $("#signup-form").serialize();
-	    console.log(datastring);
-	    $.ajax({
-				    type: "POST",
-				    url: "https://frozen-refuge-7062.herokuapp.com/signup/",
-				    data: datastring,
-				    dataType: "json",
-				    success: $(function(){
-						bootbox.alert('Je inschrijving is verstuurd!');
-					})
-		});
-				this.reset();
+		$("#signup-form").submit(function(){
+			var name = (document.forms["signup-form"]["name"].value);
+			var email = (document.forms["signup-form"]["email"].value);
+			var age = (document.forms["signup-form"]["age"].value);
+			var parent = (document.forms["signup-form"]["parent"].value);
+			var p_phone = (document.forms["signup-form"]["parent_phone"].value);
+			if (name != '' && email != '' && age !='' && parent != '' && p_phone != '') {			
+				var datastring = $("#signup-form").serialize();
+				console.log(datastring);
+				$.ajax({
+							type: "POST",
+							url: "https://frozen-refuge-7062.herokuapp.com/signup/",
+							data: datastring,
+							dataType: "json",
+							success: $(function(){
+								bootbox.alert('Je inschrijving is verstuurd!');
+							})
+				});
+						this.reset();
+						return false;
+			}
+			else {
+				bootbox.alert('Vul a.u.b. alle verplichte velden in!');
 				return false;
-	});
+			}
+		});
 });
+
+
 
 </script>
     
