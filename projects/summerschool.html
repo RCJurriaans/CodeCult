@@ -721,7 +721,6 @@ $(function() {
 			var p_phone = (document.forms["signup-form"]["parent_phone"].value);
 			if (name != '' && email != '' && age !='' && parent != '' && p_phone != '') {			
 				var datastring = $("#signup-form").serialize();
-				console.log(datastring);
 				$.ajax({
 							type: "POST",
 							url: "https://frozen-refuge-7062.herokuapp.com/signup/",
