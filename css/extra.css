@@ -4,7 +4,7 @@
 }
 
 .baseOther{
-        color:#18bc9c;
+    color:#18bc9c;
 }
 
 /* Resize and center images */
@@ -63,5 +63,23 @@
 .frontLink:hover{
 	text-decoration:underline;
 	color:white;
+}
+
+.navLink{
+	color:white;
+	size:small;
+}
+.navLink:hover{
+	text-decoration: underline;
+	color:white;
+}
+
+button.btn.btn-default{
+	background-color:#2c3e50;
+	border:none;
+	text-transform: uppercase;
+}
+button.btn.btn-default:hover{
+	color:#18bc9c;
 }
 	
