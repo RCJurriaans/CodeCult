@@ -29,7 +29,7 @@
 
 <body id="page-top" class="index">
 
-    <!-- Navigation -->
+<!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -40,7 +40,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#page-top">CodeCult</a>
+                <a class="navbar-brand" href="../index.html">CodeCult</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,18 +80,36 @@
                             <span class="caret"></span>
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="#">wat</a></li>
-                            <li><a href="#">is</a></li>
-                            <li><a href="#">deze</a></li>
+                            <li><a href="sponsoring.html">Help CodeCult</a></li>
                           </ul>
                         </div>
                     </li>
+                    <!-- Ik heb hier dropdowns van gemaakt omdat dat een snelle manier was om de layout consistent te houden...maar het is niet echt nodig qua inhoud-->
                    <li class="page-scroll">
-                        <!--<a href="codeherfst.html">CodeHerfst</a>-->
-                        <a href="summerschool.html">SummerSchool</a>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            SummerSchool
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="summerschool.html">SummerSchool</a></li>
+                            
+                          </ul>
+                        </div>
                     </li>
+                    <!-- hier is het mss wel leuk om een link naar het kopje van elke trainer te doen. Ik heb er nu BSc achtergezet omdat het dan exxxxtra fancy lijkt :V-->
                     <li class="page-scroll">
-                        <a href="trainers.html">Onze trainers</a>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Onze trainers
+                            <span class="caret"></span>
+                          </button>
+
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="trainers.html#Eszter">Eszter Fodor, <span style="text-transform:none">BSc</span></a></li>
+                            <li><a href="trainers.html#Elise">Elise van der Pol, <span style="text-transform:none">BSc</span></a></li>
+                          </ul>
+                        </div>                        
                     </li>
                 </ul>
             </div>
@@ -108,25 +126,55 @@
                     <div class="intro-text">
                         <span class="name">Basisscholen</span>
                         <hr class="star-light">
-                        <span class="skills">Workshops, lessen en materiaal voor basisscholen</span>
+                        <div class="skills">Workshops, lessen en materiaal voor basisscholen.</div>
+                        <br/>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <a href="#regulier"><button type="button" class="btn btn-default">Reguliere<br> lessen</button></a>
+                            <a href="#TSA"><button type="button" class="btn btn-default">Tussenschoolse <br>activiteit</button></a>
+                            <a href="#NSO"><button type="button" class="btn btn-default">Naschoolse<br> activiteit</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
-    <section id="Hour of Code">
+    
+    <section id="regulier">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Tussenschoolse activiteit <a href="#top"><i  class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2>Reguliere lessen</h2>
                     <hr class="star-primary">
+                    <h2><a href="#TSA"><i class="fa fa-arrow-circle-down pull-right"></i></a></h2>
+                    <h2><a href="#top"><i class="fa fa-arrow-circle-up pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-6 col-xs-12 portfolio-item">
                 <h3 class="center">Wat is het?</h3>
-                Wekelijks tussen de lessen door korte programmeerlessen met als einddoel het maken van je eigen game.
+                Om kinderen kennis te laten maken met programmeren en ze te helpen computers beter te begrijpen bieden wij een lesprogramma aan. Dit programma volgt een logische en prettige werkwijze met onze motto als uitgangspunt: "Leren door Creëren". 
+            </div>
+            <div class="col-sm-6 col-xs-6 portfolio-item">
+                <h3 class="center">Details</h3>
+                Onder onze begeleiding maken de leerlingen een spel die ze aan het einde van de blok met trots kunnen presenteren. Hierbij wordt niet alleen de fantasie van de kinderen geprikkeld, maar ook hun vermogen om problemen te ontleden gestimuleerd. Door ze vragen te stellen zoals: "Uit welke onderdelen bestaat je spel? Hoe sluiten die bij elkaar aan?" worden ze uitgedaagd om nieuwe inzichten te krijgen.
+            </div>
+        </div>
+    </section>
+
+    <section class="success" id="TSA">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Tussenschoolse activiteit</h2>
+                    <hr class="star-light">
+                    <h2><a href="#top"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+					<h2><a href="#NSO"><i style="color:white" class="fa fa-arrow-circle-down pull-right"></i></a></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-xs-12 portfolio-item">
+                <h3 class="center">Wat is het?</h3>
+                Wij bieden een workshop aan als tussenschoolse activiteit waar kinderen leren programmeren door een eigen game te maken. 
                 </div>
             <div class="col-sm-6 col-xs-6 portfolio-item">
                 <h3 class="center">Details</h3>
@@ -135,12 +183,14 @@
         </div>
     </section>
 
-    <section class="success" id="Codecademy">
+    <section id="NSO">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Naschoolse activiteit <a href="#top"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
-                    <hr class="star-light">
+                    <h2>Naschoolse activiteit</h2>
+                    <hr class="star-primary">
+                    <h2><a href="#TSA"><i class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2><a href="#top"><i class="fa fa-home pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
@@ -154,6 +204,7 @@
             </div>
         </div>
     </section>
+    
      <footer class="text-center">
         <div class="footer-above">
             <div class="container">
@@ -172,7 +223,7 @@
                     <div class="footer-col col-md-4">
                         <h3>Volg ons online:</h3>
                         <ul class="list-inline">
-                            <li><a href="https://www.facebook.com/code.cult" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
+                            <li><a href="https://www.facebook.com/codecult2014" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>
                             <li><a href="https://plus.google.com/communities/102716087425361188212" target="_blank" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
