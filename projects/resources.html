@@ -49,16 +49,66 @@
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
-                        <a href="workshops.html">Workshops</a>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Voor scholen
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="basisschool.html">Basisscholen</a></li>
+                            <li><a href="middelbarescholen.html">Middelbare scholen</a></li>
+                          </ul>
+                        </div>
                     </li>
                   <li class="page-scroll">
-                        <a href="lesprogrammas.html">Lesprogramma's</a>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Voor particulieren
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="kinderen.html">Kinderen</a></li>
+                            <li><a href="volwassenen.html">Volwassenen</a></li>
+                            <li><a href="resources.html">Tips voor zelfstudie</a></li>
+                          </ul>
+                        </div>
                     </li>
                     <li class="page-scroll">
-                        <a href="summerschool.html">SummerSchool</a>
+                       <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Voor bedrijven
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="sponsoring.html">Help CodeCult</a></li>
+                          </ul>
+                        </div>
                     </li>
+                    <!-- Ik heb hier dropdowns van gemaakt omdat dat een snelle manier was om de layout consistent te houden...maar het is niet echt nodig qua inhoud-->
                    <li class="page-scroll">
-                        <a href="resources.html">Materialen</a>
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            SummerSchool
+                            <span class="caret"></span>
+                          </button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="summerschool.html">SummerSchool</a></li>
+                          </ul>
+                        </div>
+                    </li>
+                    <!-- hier is het mss wel leuk om een link naar het kopje van elke trainer te doen. Ik heb er nu BSc achtergezet omdat het dan exxxxtra fancy lijkt :V-->
+                    <li class="page-scroll">
+                        <div class="dropdown">
+                          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Onze trainers
+                            <span class="caret"></span>
+                          </button>
+
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="trainers.html#Eszter">Eszter Fodor, <span style="text-transform:none">BSc</span></a></li>
+                            <li><a href="trainers.html#Elise">Elise van der Pol, <span style="text-transform:none">BSc</span></a></li>
+                          </ul>
+                        </div>                        
                     </li>
                 </ul>
             </div>
@@ -71,23 +121,33 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <img class="img-responsive" src="../img/icons/materials.png" width="200px" alt="">
+                    <img class="img-responsive" src="../img/icons/materials.png" width="150px" alt="">
                     <div class="intro-text">
                         <span class="name">Resources</span>
                         <hr class="star-light">
-                        <span class="skills">Waar moet je <span class="emphasis">beginnen</span>? Er zijn veel <span class="emphasis">verschillende paden</span> die je als programmeur kunt afleggen. Hier een greep uit materiaal waarmee je <span class="emphasis">direct</span> aan de slag kan.</span>
+                        <div class="skills">Waar moet je <span class="emphasis">beginnen</span>? Er zijn veel <span class="emphasis">verschillende paden</span> die je als programmeur kunt afleggen. Hier een greep uit materiaal waarmee je <span class="emphasis">direct</span> aan de slag kan.</div><br>
+                        <div class="btn-group" role="group" aria-label="...">
+                            <a href="#HourofCode"><button type="button" class="btn btn-default">Hour of Code</button></a>
+                            <a href="#Codecademy"><button type="button" class="btn btn-default">Codecademy</button></a>
+                            <a href="#CodeCombat"><button type="button" class="btn btn-default">Code Combat</button></a>
+                            <a href="#Scratch"><button type="button" class="btn btn-default">Scratch</button></a>
+                            <a href="#MIT"><button type="button" class="btn btn-default">MIT App Inventor</button></a>
+                            <a href="#StencylWorks"><button type="button" class="btn btn-default">StencylWorks</button></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="Hour of Code">
+    <section id="HourofCode">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Code.org <a href="#top"><i  class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2>Code.org</h2>
                     <hr class="star-primary">
+                    <h2><a href="#Codecademy"><i  class="fa fa-arrow-circle-down pull-right"></i></a></h2>
+                    <h2><a href="#top"><i  class="fa fa-arrow-circle-up pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
@@ -101,7 +161,7 @@
 				Binnen 1 uur de basis van programmeren leren? Kijk niet verder! Hier leer je in een serie opdrachten rond Angry Birds en Plants vs. Zombies de basisprincipes achter programmeren. De opdrachten zijn speels en leren je te denken als een programmeur!
                 </div>
 			<div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/plus.png"/>
+				<img style="padding:20px;" src="../img/icons/plus.png"/>
 				<ul>
 					<li>Direct in je browser</li>
 					<li>Geen voorkennis nodig</li>
@@ -110,7 +170,7 @@
 				</ul>
 			</div>
 			<div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/minus.png"/>
+				<img style="padding:20px;" src="../img/icons/minus.png"/>
 				<ul>
 					<li>Alleen voor beginners</li>
 					<li>Niet direct in de code duiken</li>
@@ -125,8 +185,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Codecademy <a href="#top"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2>Codecademy</h2>
                     <hr class="star-light">
+                    <h2><a href="#CodeCombat"><i style="color:white" class="fa fa-arrow-circle-down pull-right"></i></a></h2>
+                    <h2><a href="#HourofCode"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
@@ -141,8 +203,7 @@
 			</div>
                 <div class="col-sm-3 col-xs-6 portfolio-item">
 
-				<img src="../img/icons/plus.png"/>
-				<br>
+				<img style="padding:20px;" src="../img/icons/plus.png"/>
 				<ul>
 					<li>Direct in je browser</li>
 					<li>Maak spellen, sites en simulaties</li>
@@ -151,7 +212,7 @@
 				</ul>
 			</div>
 			<div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/minus.png"/>
+				<img style="padding:20px;" src="../img/icons/minus.png"/>
 				<br>
 				<ul>
 					<li>Niveau ligt hoger dan bij <a href="https://www.code.org" target="_blank" class="frontLink">Hour of Code</a></li>
@@ -161,12 +222,14 @@
             </div>
         </div>
     </section>
-    <section id="Code Combat">
+    <section id="CodeCombat">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Code Combat <a href="#top"><i class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2>Code Combat</h2>
                     <hr class="star-primary">
+                    <h2><a href="#Scratch"><i class="fa fa-arrow-circle-down pull-right"></i></a></h2>
+                    <h2><a href="#Codecademy"><i class="fa fa-arrow-circle-up pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
@@ -180,14 +243,14 @@
 				 Geef met code aan wat jouw held moet doen en kijk hoe dit vervolgens afloopt. Speel missie na missie uit en leer ondertussen de basis van programmeren!
 			 </div>
                 <div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/plus.png"/>
+				<img style="padding:20px;" src="../img/icons/plus.png"/>
 				<ul>
 					<li>Leer programmeren terwijl je een game speelt!</li>
 					<li>Duidelijke progressie van simpel naar steeds moeilijker</li>
 				</ul>
 			</div>
 			<div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/minus.png"/>
+				<img style="padding:20px;" src="../img/icons/minus.png"/>
 				<ul>
 					<li>Beperkt aanbod van programmeertalen</li>
 					<li>Het spel leidt soms af van het leerdoel</li>
@@ -198,12 +261,14 @@
     </section>
 
 
-    <section id="Hour of Code" class="success">
+    <section id="Scratch" class="success">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Scratch <a href="#top"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2>Scratch</h2>
                     <hr class="star-light">
+                    <h2><a href="#MIT"><i style="color:white" class="fa fa-arrow-circle-down pull-right"></i></a></h2>
+                    <h2><a href="#CodeCombat"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
@@ -217,7 +282,7 @@
 			Scratch is bedoeld om kinderen van 8-14 te leren programmeren. Het is een visuele programmeeromgeving, waarmee je spellen en animaties kunt maken. Aan het programmeren komt geen code te pas: je kiest commando's en koppelt ze aan elkaar. De gemaakte projecten kunnen online worden gezet en zijn te delen met anderen.
 	        </div>
                 <div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/plus.png"/>
+				<img style="padding:20px;" src="../img/icons/plus.png"/>
 				<ul>
 					<li>Makkelijk te leren</li>
 					<li>Je spel is meteen speel- en deelbaar</li>
@@ -225,7 +290,7 @@
 				</ul>
 			</div>
 			<div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/minus.png"/>
+				<img style="padding:20px;" src="../img/icons/minus.png"/>
 				<ul>
 					<li>Moeilijk om complexe dingen te maken</li>
 					<li>Resultaat is niet altijd even spannend</li>
@@ -235,12 +300,14 @@
         </div>
     </section>
 
-  <section id="MIT App Inventor">
+  <section id="MIT">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>MIT App Inventor <a href="#top"><i class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2>MIT App Inventor</h2>
                     <hr class="star-primary">
+                    <h2><a href="#StencylWorks"><i class="fa fa-arrow-circle-down pull-right"></i></a></h2>
+                    <h2><a href="#Scratch"><i class="fa fa-arrow-circle-up pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
@@ -254,7 +321,7 @@
 			Wil je je eigen apps maken? Met App-Inventor is het zo gedaan: je eigen app, die je direct op je telefoon kunt uitproberen. Je kunt alles op een simpele manier bouwen, van tekenprogramma's tot kleine applicaties.
 	        </div>
                 <div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/plus.png"/>
+				<img style="padding:20px;" src="../img/icons/plus.png"/>
 				<ul>
 					<li>Snel een app maken</li>
 					<li>Direct uitproberen op je eigen telefoon</li>
@@ -262,7 +329,7 @@
 				</ul>
 			</div>
 			<div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/minus.png"/>
+				<img style="padding:20px;" src="../img/icons/minus.png"/>
 				<ul>
 					<li>Werkt alleen voor Android</li>
 					<li>De grote hoeveelheid opties kan overweldigend zijn</li>
@@ -276,8 +343,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>StencylWorks <a href="#top"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2>StencylWorks</h2>
                     <hr class="star-light">
+                    <h2><a href="#MIT"><i style="color:white" class="fa fa-arrow-circle-up pull-right"></i></a></h2>
+                    <h2><a href="#top"><i style="color:white" class="fa fa-home pull-right"></i></a></h2>
                 </div>
             </div>
             <div class="row">
@@ -291,7 +360,7 @@
 			Maak snel een game zonder teveel de techniek in te hoeven duiken! Compleet software-pakket om spellen mee te maken, die online of mobiel gespeeld kunnen worden. Stencyl biedt de mogelijkheid om je spel naar verschillende platformen te publiceren. 
 	        </div>
                 <div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/plus.png"/>
+				<img style="padding:20px;" src="../img/icons/plus.png"/>
 				<ul>
 					<li>Op een vrij simpele manier indrukwekkende games maken</li>
 					<li>Mogelijkheid om de code in te duiken</li>
@@ -299,7 +368,7 @@
 				</ul>
 			</div>
 			<div class="col-sm-3 col-xs-6 portfolio-item">
-				<img src="../img/icons/minus.png"/>
+				<img style="padding:20px;" src="../img/icons/minus.png"/>
 				<ul>
 					<li>Door de vele opties is het soms een beetje overweldigend</li>
 					<li>Publiceren naar iPhone en Android kost behoorlijk wat geld</li>
