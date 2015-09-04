@@ -9,7 +9,8 @@
 
 /* Resize and center images */
 .small{
-	height:180px;
+	min-height:60px;
+	max-height:180px;
 	margin-left:auto;
 	margin-right:auto;
 }
