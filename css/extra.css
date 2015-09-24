@@ -93,3 +93,7 @@ button.btn.btn-default:hover{
     margin-left: auto;
     margin-right: auto;
 }
+
+option{
+	color:#2c3e50;
+}
