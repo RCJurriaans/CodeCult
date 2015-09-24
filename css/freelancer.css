@@ -10,8 +10,19 @@ p.small {
     font-size: 16px;
 }
 
+button a{
+    color:#FFF;
+}
+button a:hover{
+    text-decoration: none;
+}
+
+a:hover{
+    color: inherit;
+    text-decoration: underline;
+}
+
 a,
-a:hover,
 a:focus,
 a:active,
 a.active {
@@ -77,6 +88,15 @@ header {
     text-align: center;
     color: #fff;
     background: #18bc9c;
+}
+
+header a{
+    color: #fff;
+}
+
+header a:hover{
+    /*color: #fff;*/
+    text-decoration: underline;
 }
 
 header .container {
@@ -175,6 +195,12 @@ section h2 {
 section.success {
     color: #fff;
     background: #18bc9c;
+}
+
+
+
+input{
+    color: #2c3e50;
 }
 
 @media(max-width:767px) {
